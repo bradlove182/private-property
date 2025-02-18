@@ -6,7 +6,7 @@
         "build": "react-router build",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "dev": "react-router dev",
+        "dev": "react-router dev --open",
         "start": "react-router-serve ./build/server/index.js",
         "typecheck": "react-router typegen && tsc"
     },

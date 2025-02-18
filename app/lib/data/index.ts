@@ -10,13 +10,13 @@ export interface ListingAgency {
 
 export interface PropertyListing {
     id: number
-    title: string
     price: number
     tags: string[]
     images: string[]
     agency: ListingAgency
     agent: ListingAgent
     type: "apartment" | "house"
+    term: "day" | "month"
     bathrooms: number
     bedrooms: number
     garages: number
@@ -31,18 +31,18 @@ export interface PropertyListing {
 
 export const featuredListing: PropertyListing = {
     id: 1,
-    title: "3 Bedroom Apartment in Durbanville",
     price: 2995000,
     tags: ["HD Media", "Retirement"],
-    images: [],
+    images: ["/assets/images/Image-1.webp", "/assets/images/Image-2.webp", "/assets/images/Image-3.webp"],
     agency: {
         name: "ikhayaProp",
-        logo: "",
+        logo: "/assets/agent/ikhayaProp.webp",
     },
     agent: {
         name: "Thato Sitole",
-        profilePicture: "",
+        profilePicture: "/assets/agent/thato-sitole.webp",
     },
+    term: "day",
     type: "apartment",
     erfSize: 880,
     propertySize: 320,

@@ -1,6 +1,6 @@
+import type { Route } from "./+types"
 import { Listing } from "@lib/components/listing"
-import type { Route } from "./+types";
-import { sleep } from "@lib/utils";
+import { sleep } from "@lib/utils"
 
 export function meta() {
     return [
@@ -9,22 +9,21 @@ export function meta() {
     ]
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- Required to fetch data on navigation
 export async function clientLoader() {
     // We sleep to simulate fetching data from a server
     await sleep(1000)
-    return (await import("@lib/data/index")).featuredListing;
-  }
+    return (await import("@lib/data/index")).featuredListing
+}
 
 // HydrateFallback is rendered while the client loader is running
 export function HydrateFallback() {
-    return <div>Loading...</div>;
-  }
+    return <div>Loading...</div>
+}
 
 export default function Index({ loaderData }: Route.ComponentProps) {
-    const listing = loaderData;
+    const listing = loaderData
     return (
-        <div>
-            <Listing listing={listing} />
-        </div>
+        <Listing listing={listing} />
     )
 }

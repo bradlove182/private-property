@@ -3,7 +3,9 @@ export interface Props {
 }
 
 export default function Badge({ children }: Props) {
-    <span>
-        {children}
-    </span>
+    return (
+        <span>
+            {children}
+        </span>
+    )
 }

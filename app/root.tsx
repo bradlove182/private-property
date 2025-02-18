@@ -41,7 +41,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-    return <Outlet />
+    return (
+        <div className="grid h-dvh w-dvw items-center justify-center">
+            <Outlet />
+        </div>
+    )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
