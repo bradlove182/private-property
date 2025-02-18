@@ -8,7 +8,7 @@ export interface ListingAgency {
     logo: string
 }
 
-export interface FeaturedListing {
+export interface PropertyListing {
     id: number
     title: string
     price: number
@@ -29,7 +29,7 @@ export interface FeaturedListing {
 
 }
 
-export const featuredListing: FeaturedListing = {
+export const featuredListing: PropertyListing = {
     id: 1,
     title: "3 Bedroom Apartment in Durbanville",
     price: 2995000,
@@ -53,4 +53,4 @@ export const featuredListing: FeaturedListing = {
     area: "Durbanville",
     isReduced: true,
     isPromoted: true,
-}
+} as const
