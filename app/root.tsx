@@ -42,9 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <div className="grid h-dvh w-dvw items-center justify-center">
+        <main className="grid h-dvh w-dvw items-center justify-center p-8 max-w-[768px] m-auto">
             <Outlet />
-        </div>
+        </main>
     )
 }
 
