@@ -9,7 +9,7 @@ export interface ListingAgency {
 }
 
 export interface PropertyListing {
-    id: number
+    id: string
     price: number
     tags: string[]
     images: string[]
@@ -30,7 +30,7 @@ export interface PropertyListing {
 }
 
 export const featuredListing: PropertyListing = {
-    id: 1,
+    id: "1",
     price: 2995000,
     tags: ["HD Media", "Retirement"],
     images: ["/assets/images/Image-1.webp", "/assets/images/Image-2.webp", "/assets/images/Image-3.webp"],
