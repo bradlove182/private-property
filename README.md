@@ -18,7 +18,7 @@ pnpm install
 Start the development server with HMR:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
 Your application will be available at `http://localhost:5173`.
@@ -28,7 +28,7 @@ Your application will be available at `http://localhost:5173`.
 Create a production build:
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 ## Preview Production Build
@@ -36,5 +36,5 @@ pnpm run build
 Start the production server:
 
 ```bash
-pnpm run start
+pnpm start
 ```
