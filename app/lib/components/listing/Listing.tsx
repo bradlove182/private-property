@@ -46,16 +46,16 @@ export default function Listing({ listing }: Props) {
                 <div className="grid grid-cols-1 grid-rows-1">
                     {
                         isReduced && (
-                            <Badge className="col-start-1 row-start-1 m-2 z-10">Reduced</Badge>
+                            <Badge variant="success" className="col-start-1 row-start-1 m-2 z-10">Reduced</Badge>
                         )
                     }
                     <div className="col-start-1 row-start-1">
                         <img src={images[0]} alt="Image 1" />
                     </div>
-                    <div className="col-start-1 row-start-1 self-end items-center size-min m-2 gap-2 flex z-10">
+                    <div className="col-start-1 row-start-1 self-end items-center size-min m-2 gap-1 flex z-10">
                         {
-                            tags.map(tag => (
-                                <Badge key={tag}>
+                            tags.map((tag, index) => (
+                                <Badge key={tag} variant={index === 0 ? "warning" : "default"}>
                                     {tag}
                                 </Badge>
                             ))
@@ -75,7 +75,7 @@ export default function Listing({ listing }: Props) {
                     </h4>
                     {
                         isPromoted && (
-                            <Badge>Promoted</Badge>
+                            <Badge variant="muted" size="sm">Promoted</Badge>
                         )
                     }
                 </div>

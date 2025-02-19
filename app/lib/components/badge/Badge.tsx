@@ -1,13 +1,26 @@
+import type { BadgeSize, BadgeVariant } from "."
 import { cn } from "@lib/utils"
+import { badgeVariants } from "."
 
-export interface Props {
+export interface Props extends React.HTMLAttributes<HTMLSpanElement> {
     children: React.ReactNode
     className?: string
+    variant?: BadgeVariant
+    size?: BadgeSize
 }
 
-export default function Badge({ children, className }: Props) {
+export default function Badge({
+    children,
+    className,
+    variant = "default",
+    size = "default",
+    ...rest
+}: Props) {
     return (
-        <span className={cn("leading-none text-nowrap font-semibold size-min rounded bg-neutral-200 px-2 py-1 text-xs", className)}>
+        <span
+            className={cn(badgeVariants({ variant, size }), className)}
+            {...rest}
+        >
             {children}
         </span>
     )
