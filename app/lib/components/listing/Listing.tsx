@@ -77,11 +77,11 @@ export default function Listing({ listing }: Props) {
             }
             <div className="rounded overflow-hidden bg-neutral-white shadow-2xl">
                 <div className="flex p-2 bg-brand-agency justify-between items-center h-[60px]">
-                    <img src={agency.logo} alt={agency.name} className="object-contain max-w-[186px]" />
+                    <img src={agency.logo} alt={agency.name} className="object-contain max-w-[186px] size-full" />
                     <div className="flex gap-4">
                         <span className="font-semibold text-sm hidden sm:block text-neutral-900">{agent.name}</span>
                         <img
-                            className="rounded-full border border-white size-16 -mb-10 -mt-2 shadow z-10"
+                            className="rounded-full border border-white size-16 -mb-10 -mt-2 shadow z-10 min-h-16 min-w-16"
                             src={agent.profilePicture}
                             alt={agent.name}
                         />
