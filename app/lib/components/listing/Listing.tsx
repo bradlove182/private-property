@@ -67,7 +67,7 @@ export default function Listing({ listing }: Props) {
     }, [])
 
     return (
-        <div id={`listing-${id}`} className="w-full max-w-[768px] overflow-hidden">
+        <div id={`listing-${id}`} className="w-full max-w-[768px]">
             {
                 isPromoted && (
                     <Badge variant="muted" size="sm" className="block md:hidden mb-4">
