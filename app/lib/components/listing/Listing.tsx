@@ -91,7 +91,7 @@ export default function Listing({ listing }: Props) {
                     <div className="grid grid-cols-1 grid-rows-1">
                         {
                             isReduced && (
-                                <Badge variant="success" className="col-start-1 row-start-1 m-2 z-10">
+                                <Badge variant="success" className="col-start-1 row-start-1 m-2 z-10 font-bold text-sm">
                                     Reduced
                                 </Badge>
                             )
@@ -116,9 +116,9 @@ export default function Listing({ listing }: Props) {
                 </div>
                 <div className="flex p-4 pt-3 gap-2 md:gap-6 flex-col md:flex-row">
                     <div className="flex flex-col justify-between">
-                        <h4 className="font-bold text-2xl text-nowrap">
+                        <h4 className="font-bold text-xl md:text-2xl text-nowrap">
                             {formatPrice(price)}
-                            <span className="pl-1 text-xs">{`per ${term}`}</span>
+                            <span className="pl-1 text-sm md:text-xs">{`per ${term}`}</span>
                         </h4>
                         {
                             isPromoted && (
@@ -160,11 +160,11 @@ export default function Listing({ listing }: Props) {
                                 <div className="flex gap-2 md:hidden">
                                     <Badge className="gap-1" variant="highlight">
                                         <span className="font-normal text-neutral-600">Erf</span>
-                                        <span>{`${erfSize} m²`}</span>
+                                        <span className="text-sm">{`${erfSize} m²`}</span>
                                     </Badge>
                                     <Badge className="gap-1" variant="highlight">
                                         <span className="font-normal text-neutral-600">Floor</span>
-                                        <span>{`${propertySize} m²`}</span>
+                                        <span className="text-sm">{`${propertySize} m²`}</span>
                                     </Badge>
                                 </div>
                             </div>
