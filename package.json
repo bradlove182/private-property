@@ -2,6 +2,10 @@
     "name": "private-property",
     "type": "module",
     "private": true,
+    "packageManager": "pnpm@10.3.0",
+    "engines": {
+        "node": ">=18"
+    },
     "scripts": {
         "build": "react-router build",
         "lint": "eslint .",
